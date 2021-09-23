@@ -1,0 +1,9 @@
+{
+  "deno.enable": true,
+  "deno.lint": true,
+  "deno.unstable": true,
+  "deno.suggest.autoImports": true,
+  "deno.importMap": "./imports.json",
+  "editor.useTabStops": false,
+  "editor.tabSize": 2
+}
