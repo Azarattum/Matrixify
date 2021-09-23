@@ -3,20 +3,29 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>TEST</title>
+    <title>Matrixify</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
   </head>
   <body>
-    <form
-      enctype="multipart/form-data"
-      action="/api/transform"
-      method="post"
-      onsubmit="upload(event)"
-    >
-      <input type="file" name="file" />
-      <button type="submit">OK</button>
-    </form>
+    <h1 class="title">Matrixify</h1>
+    <h2 class="slogan" id="slogan">FEEL THE MATRIX</h2>
+    <div class="container">
+      <div class="image" onclick="choose()">
+        <div class="preview" id="preview"></div>
+      </div>
+      <button class="start hidden" id="submit">START</button>
+      <form
+        style="visibility: hidden"
+        enctype="multipart/form-data"
+        action="/api/transform"
+        method="post"
+        onsubmit="upload(event)"
+        id="form"
+      >
+        <input id="file" type="file" name="file" />
+      </form>
+    </div>
   </body>
 </html>

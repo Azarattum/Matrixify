@@ -12,7 +12,7 @@ router.post("/api/transform", async (ctx) => {
   const file = data.files?.[0];
   const path = file?.filename;
   const name = file?.originalName;
-  const valid = name?.match(fileRegex);
+  const valid = name?.toLowerCase().match(fileRegex);
   if (!path || !valid) return (ctx.response.status = 400);
   const target = `assets/${name}`;
   await Deno.copyFile(path, target);
