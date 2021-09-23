@@ -11,7 +11,7 @@ const upload = async () => {
   const url = form.action;
   const file = fileInput.files[0];
 
-  const filename = file.name.replace(/\s|(\.(?!\w{3}$))/g, "_");
+  const filename = file.name.replace(/\s|(\.(?!\w{3,4}$))|\//g, "_");
   const data = new FormData();
   data.append("file", file, filename);
 
